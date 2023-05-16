@@ -16,4 +16,7 @@ class Movie{
     $this->vote = $vote;
     $this->image = $image;
   }
+  public static function fetchMoviesFromDatabase(){
+    
+  }
 }
