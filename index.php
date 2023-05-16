@@ -18,8 +18,8 @@
   <main class="container">
     <?php echo var_dump(Movie::fetchMoviesFromDatabase($conn)); ?>
   </main>
-  <footer>
-    
+  <footer class="bg-dark text-white">
+    <?php include __DIR__."/partials/template/footer.php"; ?>
   </footer>
 </body>
 </html>
