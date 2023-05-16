@@ -4,7 +4,8 @@
 main {
   margin-top: var(--generalHeight);
   margin-bottom: var(--generalHeight);
-  height: auto;
+  height: calc(100vh - var(--generalHeight)*2);
+  overflow-y: auto;
   width: 100%;
 }
 footer, header {
