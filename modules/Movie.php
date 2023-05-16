@@ -16,7 +16,19 @@ class Movie{
     $this->vote = $vote;
     $this->image = $image;
   }
-  public static function fetchMoviesFromDatabase(){
-    
+  public static function fetchMoviesFromDatabase($conn){
+    $movies = [];
+    $sql = "SELECT * FROM movies";
+    $result = $conn->query($sql);
+    if($result && $result->num_rows > 0){
+      while($row = $result->fetch_object()){
+        $movies[] = new Movie($row->id,$row->title,$row->original_title,$row->nationality,$row->date,$row->vote,$row->image);
+      }
+    }elseif($result){
+      echo "[User.getArrayOfUsers] Nessun utente trovato";
+    }else{
+      echo "[User.getArrayOfUsers] Query error!";
+    }
+    return $movies;
   }
 }
