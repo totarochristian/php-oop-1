@@ -17,7 +17,14 @@
     <?php include __DIR__."/partials/template/navbar.php"; ?>
   </header>
   <main>
-    <?php echo var_dump(Movie::fetchMoviesFromDatabase($conn)); ?>
+    <div class="d-flex justify-content-center align-items-center gap-4 p-4 flex-wrap">
+      <?php
+      $arrayOfMovies = Movie::fetchMoviesFromDatabase($conn);
+        foreach($arrayOfMovies as $movie){
+          $movie->printMovieCard();
+        }
+      ?>
+    </div>
   </main>
   <footer class="bg-dark text-white">
     <?php include __DIR__."/partials/template/footer.php"; ?>
