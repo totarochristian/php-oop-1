@@ -1,0 +1,21 @@
+:root{
+  --generalHeight: 60px;
+}
+main {
+  margin-top: var(--generalHeight);
+  margin-bottom: var(--generalHeight);
+  height: auto;
+  width: 100%;
+}
+footer, header {
+  height: var(--generalHeight);
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
+}
