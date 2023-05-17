@@ -8,6 +8,8 @@
       foreach($arrayOfMovies as $movie){
         $movie->printMovieCard();
       }
+    }elseif(!$conn){
+      echo "<h2>Siamo spiacenti, il database non è online quindi non sono stati trovati film da poter visualizzare</h2>";
     }else{
       echo "<h2>Siamo spiacenti, non sono stati trovati film da poter visualizzare</h2>";
     }
