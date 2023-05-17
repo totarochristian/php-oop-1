@@ -1,6 +1,9 @@
 :root{
   --generalHeight: 60px;
 }
+body{
+  overflow-y: hidden;
+}
 main {
   margin-top: var(--generalHeight);
   margin-bottom: var(--generalHeight);
